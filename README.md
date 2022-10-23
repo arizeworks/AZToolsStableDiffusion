@@ -1,4 +1,4 @@
-# AZToolsStableDiffusion
+# AZTools for Stable Diffusion
 
 StableDiffusionの便利ツールまとめ
 
