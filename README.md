@@ -32,7 +32,7 @@ Stable Diffusion Web UIのフォーマットへ変換して表示します。
 ![image](https://user-images.githubusercontent.com/56951093/197378895-114a4b70-b357-4155-8507-ffcdbbf524b9.png)
 
 
-
+<br>
 
 ### resort_img_by_prompt.py
 
