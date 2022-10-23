@@ -3,6 +3,13 @@
 StableDiffusionの便利ツールまとめ
 
 
+### git_pull.bat
+
+```
+Gitがインストール済みの場合、このリポジトリが最新版へ更新されます。
+```
+
+
 ### pnginfo.py
 
 ```
