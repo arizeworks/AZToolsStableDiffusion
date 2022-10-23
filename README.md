@@ -3,7 +3,7 @@
 StableDiffusionの便利ツールまとめ
 
 
--pnginfo.py
+### pnginfo.py
 
 
 png画像にプロンプトのメタデータが含まれていた場合、ドラッグ＆ドロップすることでプロンプトを表示します。
