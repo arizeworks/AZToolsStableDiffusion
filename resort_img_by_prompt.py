@@ -104,7 +104,7 @@ if __name__ == '__main__':
     # 作成するディレクトリの場所
     target_dir = os.path.abspath(os.path.join(target_files[0], os.pardir))
 
-    target_prompt = input("検索するプロンプト（1単語のみ）を入力してください:")
+    target_prompt = input("検索するポジティブプロンプト（1単語のみ）を入力してください:")
     file_num = CheckImg(target_files, target_prompt)
     print("該当ファイル数:" + str(file_num))
     if file_num > 0:
