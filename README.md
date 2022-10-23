@@ -22,6 +22,7 @@ Pythonファイルのショートカットを作成して使ってください�
 <br>
 
 ### pnginfo.py
+#### png画像のプロンプトを表示
 
 ```
 注意: Pillowがインストールされていない場合、自動的にインストールを行います。
@@ -37,7 +38,7 @@ Stable Diffusion Web UIのフォーマットへ変換して表示します。
 <br>
 
 ### resort_img_by_prompt.py
-
+#### 特定のポジティブプロンプトを含む画像をフォルダにまとめる
 ```
 注意: オリジナルの resort_img_by_prompt.py は pnginfo.py と同じディレクトリに配置する必要があります。
 
