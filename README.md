@@ -28,12 +28,10 @@ StableDiffusionのメタデータが含まれているpng画像を
 
 NovelAI製の画像の場合、
 Stable Diffusion Web UIのフォーマットへ変換して表示します。
-
-
 ```
 ![image](https://user-images.githubusercontent.com/56951093/197378895-114a4b70-b357-4155-8507-ffcdbbf524b9.png)
 
-
+<br>
 <br>
 
 ### resort_img_by_prompt.py
@@ -50,6 +48,8 @@ Stable Diffusion Web UIのフォーマットへ変換して表示します。
 フォルダをD&Dした場合、その直下のファイルが検索対象となります。検索対象と同じディレクトリにフォルダが作成されます。
 （フォルダとファイルを複数D&Dした場合、ファイルのみが対象となります。）
 （フォルダのみを複数D&Dした場合、最初のフォルダが対象となります。）
-
 ```
 ![image](https://user-images.githubusercontent.com/56951093/197391370-e76931be-da6c-4b51-bb83-4f21225997ca.png)
+
+<br>
+<br>
