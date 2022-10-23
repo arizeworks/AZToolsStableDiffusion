@@ -37,8 +37,8 @@ Stable Diffusion Web UIのフォーマットへ変換して表示します。
 ### resort_img_by_prompt.py
 
 ```
-フォルダまたはファイルをドラッグ&ドロップして
-プロンプト（ポジティブプロンプト1単語のみ）を入力すると、
+フォルダまたはファイルをドラッグ&ドロップして、
+プロンプト（ポジティブプロンプト・1単語のみ）を入力すると、
 そのプロンプトが含まれたpng画像のみを一括でフォルダにまとめます。
 フォルダ名はプロンプト名になります。
 
@@ -49,3 +49,4 @@ Stable Diffusion Web UIのフォーマットへ変換して表示します。
 
 注意 : オリジナルのresort_img_by_prompt.pyはpnginfo.pyと同じディレクトリに配置する必要があります。
 ```
+![image](https://user-images.githubusercontent.com/56951093/197391370-e76931be-da6c-4b51-bb83-4f21225997ca.png)
