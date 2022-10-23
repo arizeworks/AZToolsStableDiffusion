@@ -3,7 +3,7 @@
 StableDiffusionの便利ツールまとめ
 
 
-### git_pull.py
+### git_pull.
 
 ```
 Gitがインストール済みの場合、このリポジトリが最新版へ更新されます。
