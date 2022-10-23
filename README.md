@@ -3,7 +3,7 @@
 StableDiffusionの便利ツールまとめ
 
 
-### git_pull.bat
+## git_pull.bat
 
 ```
 Gitがインストール済みの場合、実行するとこのリポジトリが最新版へ更新されます。
@@ -11,7 +11,7 @@ Gitがインストール済みの場合、実行するとこのリポジトリ�
 
 <br>
 
-### Pythonファイルの使い方
+## Pythonファイルの使い方
 ```
 このリポジトリを任意の場所に配置して、
 Pythonファイルのショートカットを作成して使ってください。
@@ -21,7 +21,7 @@ Pythonファイルのショートカットを作成して使ってください�
 
 <br>
 
-### pnginfo.py
+## pnginfo.py
 #### png画像のプロンプトを表示
 
 ```
@@ -37,7 +37,7 @@ Stable Diffusion Web UIのフォーマットへ変換して表示します。
 
 <br>
 
-### resort_img_by_prompt.py
+## resort_img_by_prompt.py
 #### 特定のポジティブプロンプトを含む画像をフォルダにまとめる
 ```
 注意: オリジナルの resort_img_by_prompt.py は pnginfo.py と同じディレクトリに配置する必要があります。
