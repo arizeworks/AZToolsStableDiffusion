@@ -109,7 +109,7 @@ if __name__ == '__main__':
     print("該当ファイル数:" + str(file_num))
     if file_num > 0:
         print(target_dir + "\\" + target_prompt)
-        if input("該当ファイルを上記のフォルダへ移動します。よろしいですか？ Y/n:") == "Y":
+        if input("該当ファイルを上記のフォルダへ移動します。よろしいですか？ Y/n:").lower() == "Y".lower():
 
             file_num = ResortImg(target_files, target_prompt)
             print(str(file_num) + "のファイルをフォルダ( " + target_prompt + " )へ移動しました")
