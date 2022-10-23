@@ -75,7 +75,6 @@ if "Software" in img.text:
                   "Size: " + img_size + ", " +
                 # "Noise: 不明" + Comment_dict["noise"] ","+
                   "Denoising strength: " + str(Comment_dict["strength"]) + ", " +
-                #   "Model hash: 925997e9, " +
                   "Clip skip: 2, " +
                   "ENSD: 31337"
                   )
