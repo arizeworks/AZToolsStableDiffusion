@@ -27,7 +27,10 @@ except ImportError:
 
 
 def DisplayPrompt(img):
+    img = Image.open(img)
+
     # NovelAI
+    Positive_Prompt = ""
     if "Software" in img.text:
         if img.text["Software"] == "NovelAI":
             # print("Software :" + img.text["Software"])
@@ -36,11 +39,12 @@ def DisplayPrompt(img):
             #     print("Source :" + img.text["Source"])
 
             if "Description" in img.text:
-                Description = img.text["Description"].replace("{","(")
-                Description = Description.replace("}",")")
-                Description = Description.replace("\"","")
+                Positive_Prompt = img.text["Description"].replace("{","(")
+                Positive_Prompt = Positive_Prompt.replace("}",")")
+                Positive_Prompt = Positive_Prompt.replace("\"","")
 
-                print(Description)
+                if __name__ == '__main__':
+                    print(Positive_Prompt)
 
             if "Comment" in img.text:
                 Comment_dict = json.loads(img.text["Comment"])
@@ -50,7 +54,8 @@ def DisplayPrompt(img):
                     Negative_prompt = Negative_prompt.replace("}",")")
                     Negative_prompt = Negative_prompt.replace("\"","")
 
-                    print("Negative prompt: " + Negative_prompt)
+                    if __name__ == '__main__':
+                        print("Negative prompt: " + Negative_prompt)
 
                     if Comment_dict["sampler"] == "k_euler_ancestral":
                         Sampler = "Euler a"
@@ -68,34 +73,47 @@ def DisplayPrompt(img):
                     w, h = img.size
                     img_size = str(w) + "x" + str(h)
 
-                    print("Steps: " + str(Comment_dict["steps"]) + ", " +
-                        "Sampler: " + Sampler + ", " +
-                        "CFG scale: " + str(Comment_dict["scale"]) + ", " +
-                        "Seed: " + str(Comment_dict["seed"]) + ", " +
-                        "Size: " + img_size + ", " +
-                        # "Noise: 不明" + Comment_dict["noise"] ","+
-                        "Denoising strength: " + str(Comment_dict["strength"]) + ", " +
-                        "Clip skip: 2, " +
-                        "ENSD: 31337"
-                        )
-                # print("Source" + img.text["Comment"])
+                    if __name__ == '__main__':
+                        print("Steps: " + str(Comment_dict["steps"]) + ", " +
+                            "Sampler: " + Sampler + ", " +
+                            "CFG scale: " + str(Comment_dict["scale"]) + ", " +
+                            "Seed: " + str(Comment_dict["seed"]) + ", " +
+                            "Size: " + img_size + ", " +
+                            # "Noise: 不明" + Comment_dict["noise"] ","+
+                            "Denoising strength: " + str(Comment_dict["strength"]) + ", " +
+                            "Clip skip: 2, " +
+                            "ENSD: 31337"
+                            )
+
         else:
-            print("Nothing found in the image.")
+            if __name__ == '__main__':
+                print("Nothing found in the image.")
 
     # Stable Diffusion Web UI
     elif "parameters" in img.text:
-        print("Stable Diffusin Web UI")
-        print(img.text["parameters"])
+        if __name__ == '__main__':
+            print("Stable Diffusin Web UI")
+            print(img.text["parameters"])
+
+        prompt = img.text["parameters"].split("Negative prompt: ")
+        Positive_Prompt = prompt[0]
+
 
     else:
-        print("Nothing found in the image.")
+        if __name__ == '__main__':
+            print("Nothing found in the image.")
 
-    # subprocess.call('PAUSE', shell=True)
-    os.system("PAUSE")
+    return Positive_Prompt
 
 
 if __name__ == '__main__':
-    img = Image.open(sys.argv[1])
-    # img = Image.open(r"C:\Users\User\Desktop\test_2.png")
+
+    try:
+        img = sys.argv[1]
+    except:
+        img = r"C:\Users\User\Desktop\test.png"
 
     DisplayPrompt(img)
+
+    # subprocess.call('PAUSE', shell=True)
+    os.system("PAUSE")
