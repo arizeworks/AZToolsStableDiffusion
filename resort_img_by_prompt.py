@@ -92,7 +92,9 @@ def ResortImg(target_files, prompt, check_only=True):
             # else:
             #     pass
 
-            if prompt_exist == len(prompt_list):
+            # 重複を含めるため>=に変更
+            # if prompt_exist == len(prompt_list):
+            if prompt_exist >= len(prompt_list):
                 file_num += 1
                 if not check_only:
                     # print(file + " True")
