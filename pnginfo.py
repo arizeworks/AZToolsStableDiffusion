@@ -92,11 +92,17 @@ def DisplayPrompt(img):
     # Stable Diffusion Web UI
     elif "parameters" in img.text:
         if __name__ == '__main__':
-            print("Stable Diffusin Web UI")
+            print("Stable Diffusion Web UI")
             print(img.text["parameters"])
 
-        prompt = img.text["parameters"].split("Negative prompt: ")
-        Positive_Prompt = prompt[0]
+        prompt = img.text["parameters"]
+        # prompt = prompt.replace("\n", "")
+        pos = prompt.find("Negative prompt:")
+        if not pos > -1:
+            # Negativeプロンプトがない場合、Steps移行を削除する
+            pos = prompt.find("Steps:")
+        Positive_Prompt = prompt[:pos]
+        # print(Positive_Prompt)
 
 
     else:

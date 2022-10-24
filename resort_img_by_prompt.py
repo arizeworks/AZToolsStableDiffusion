@@ -52,6 +52,7 @@ except ImportError:
 def ResortImg(target_files, prompt, check_only=True):
 
     prompt_list = []
+    folder_name = prompt
     prompt = prompt.lower()
 
     if prompt.find(","):
@@ -100,7 +101,7 @@ def ResortImg(target_files, prompt, check_only=True):
                 file_num += 1
                 if not check_only:
                     # print(file + " True")
-                    new_dir = target_dir + "\\" + prompt
+                    new_dir = target_dir + "\\" + folder_name
                     if not os.path.exists(new_dir):
                         os.mkdir(new_dir)
                     shutil.move(file, new_dir + "\\" + os.path.basename(file))
