@@ -52,6 +52,8 @@ except ImportError:
 def ResortImg(target_files, prompt, check_only=True):
 
     prompt_list = []
+    prompt = prompt.lower()
+
     if prompt.find(","):
         prompt = prompt.replace(" ","")
         prompt_list = prompt.split(",")
@@ -111,8 +113,8 @@ if __name__ == '__main__':
     target_files = []
     # D&Dのファイルを全てリストに格納
 
-    target_files = sys.argv[1:]
-    # target_files.append(r"E:\GitHub\stable-diffusion-webui\outputs\txt2img-images\test.png")
+    # target_files = sys.argv[1:]
+    target_files.append(r"E:\GitHub\stable-diffusion-webui\outputs\txt2img-images")
 
     len_target_files = len(target_files)
 
