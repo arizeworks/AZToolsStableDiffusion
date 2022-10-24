@@ -39,9 +39,9 @@ def DisplayPrompt(img):
             #     print("Source :" + img.text["Source"])
 
             if "Description" in img.text:
-                Positive_Prompt = img.text["Description"].replace("{","(")
-                Positive_Prompt = Positive_Prompt.replace("}",")")
-                Positive_Prompt = Positive_Prompt.replace("\"","")
+                Positive_Prompt = img.text["Description"].replace("{", "(")
+                Positive_Prompt = Positive_Prompt.replace("}", ")")
+                Positive_Prompt = Positive_Prompt.replace("\"", "")
 
                 if __name__ == '__main__':
                     print(Positive_Prompt)
@@ -50,9 +50,9 @@ def DisplayPrompt(img):
                 Comment_dict = json.loads(img.text["Comment"])
                 if "uc" in Comment_dict:
 
-                    Negative_prompt = Comment_dict["uc"].replace("{","(")
-                    Negative_prompt = Negative_prompt.replace("}",")")
-                    Negative_prompt = Negative_prompt.replace("\"","")
+                    Negative_prompt = Comment_dict["uc"].replace("{", "(")
+                    Negative_prompt = Negative_prompt.replace("}", ")")
+                    Negative_prompt = Negative_prompt.replace("\"", "")
 
                     if __name__ == '__main__':
                         print("Negative prompt: " + Negative_prompt)
